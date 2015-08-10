@@ -34,17 +34,30 @@ function evenNumbers(num){
 }
 
 
-
-
-
-
-
-
-
+function oddsLess(num){
+  if(num >= 40){
+    var answerArray = [];
+    for (var i = 40; i <= num; i++) {
+      if (i % 2 !== 0){
+        answerArray.push(i);
+      }
+    }
+  return answerArray;
+  }else{
+    var lessArray = [];
+    for (var j = 40; j >=0; j--) {
+      if(j >= num){
+        lessArray.push(j);
+      }
+    }
+    return lessArray;
+  }
+}
 
 
 module.exports = {
   largestNumber: largestNumber,
   oddNumbers: oddNumbers,
-  evenNumbers: evenNumbers
+  evenNumbers: evenNumbers,
+  oddsLess: oddsLess
 };

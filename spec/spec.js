@@ -42,6 +42,18 @@ describe('Problem 3', function() {
 //Problem 4
 // Write a function that takes a random number from 0 to 100 as an argument and returns the all the odd numbers from 40 to that random number in an array. If the number is smaller than 40, return all the numbers down to the randomized one in an array - i.e., if the number is 37, you should return [40, 39, 38, 37].
 
+describe('Problem 4', function() {
+  it('should return all odds from 40-num', function() {
+      expect(code.oddsLess(50)).toEqual([41, 43, 45, 47, 49]);
+    expect(code.oddsLess(45)).toEqual([41, 43, 45]);
+    expect(code.oddsLess(55)).toEqual([41, 43, 45, 47, 49, 51, 53, 55]);
+  });
+   it('should return all from num-40', function() {
+    expect(code.oddsLess(37)).toEqual([40, 39, 38, 37]);
+    expect(code.oddsLess(30)).toEqual([40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30]);
+    expect(code.oddsLess(35)).toEqual([40, 39, 38, 37, 36, 35]);
+  });
+});
 
 //Problem 5
 // Write a function that takes a random number from 0 to 10,000 as an argument and returns the sum of its digits. For instance, if the randomized number is 1049, the function should return 14.
