@@ -58,15 +58,58 @@ describe('Problem 4', function() {
 //Problem 5
 // Write a function that takes a random number from 0 to 10,000 as an argument and returns the sum of its digits. For instance, if the randomized number is 1049, the function should return 14.
 
+describe('Problem 5', function() {
+  it('should return sum of all digits', function() {
+      expect(code.sumDigits(6999)).toEqual(33);
+    expect(code.sumDigits(9999)).toEqual(36);
+    expect(code.sumDigits(145)).toEqual(10);
+  });
+});
+
+
 //Problem 6
 // Write a function that takes a random number from 0 to 10,0000 as an argument and calculates the sum of its digits repeatedly as long as the sum is a single digit. Return that number. For instance, if the randomized number is 1049, the function should return 5.
+
+describe('Problem 6', function() {
+  it('should return sum of all digits', function() {
+    expect(code.sumSingleDigits(6999)).toEqual(6);
+    expect(code.sumSingleDigits(9999)).toEqual(9);
+    expect(code.sumSingleDigits(145)).toEqual(5);
+  });
+});
+
 
 //Problem 7
 // Write a function that takes two random numbers from 0 to 100 as arguments and returns the smaller number that is greater than one, such that both numbers are divided by it with no remainder. For instance, for 9 and 6 you should print 3. If there isn't one, simply return "Sorry!".
 
+describe('Problem 7', function() {
+  it('should return least common factor', function() {
+    expect(code.leastCommonFactor(9, 6)).toEqual(3);
+    expect(code.leastCommonFactor(50, 5)).toEqual(5);
+    expect(code.leastCommonFactor(11, 6)).toEqual("Sorry!");
+  });
+});
 
 //Problem 8
 // Write a function that takes two random numbers from 0 to 100 as arguments and returns their least common multiple of them.
 
-//Problem 9
-// Write a function that takes two randomized numbers as arguments and returns their average and standard deviation.
+describe('Problem 8', function() {
+  it('should return least common multiple', function() {
+    expect(code.leastCommonMultiple(9, 6)).toEqual(18);
+    expect(code.leastCommonMultiple(50, 5)).toEqual(50);
+    expect(code.leastCommonMultiple(11, 6)).toEqual(66);
+  });
+});
+
+
+// //Problem 9
+// // Write a function that takes two randomized numbers as arguments and returns their average and standard deviation.
+
+describe('Problem 9', function() {
+  it('should return average and standard deviation', function() {
+    expect(code.averageStD(9, 6)).toEqual([7.5, 3]);
+    expect(code.averageStD(50, 5)).toEqual([27.5, 45]);
+    expect(code.averageStD(11, 6)).toEqual([8.5, 5]);
+  });
+});
+
